@@ -65,7 +65,7 @@ Conducted in-depth exploratory data analysis to gain insights into Medicare clai
   - Top 10 Procedure codes used in fraudulent claims in outpatient claims
 
 <p>
-  <a href="https://github.com/Bhuvi128/Bengaluru-Restaurant-Trends-Analysis/blob/main/Bengaluru%20Restaurant%20Trends%20Analysis.ipynb" target="_blank" style="text-decoration:none;">
+  <a href="https://github.com/Bhuvi128/Medicare-Fraud-Claims-Analysis/blob/main/Medicare%20Fraud%20Claims%20Analysis.ipynb" target="_blank" style="text-decoration:none;">
     <img src="https://img.shields.io/badge/View-Python_Notebook-ffbcc4?style=for-the-badge&logo=jupyter" alt="Python Notebook">
   </a>
 </p>
