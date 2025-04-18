@@ -72,7 +72,7 @@ Conducted in-depth exploratory data analysis to gain insights into Medicare clai
 
 ### 📊Power BI Interactive dashboard
 
-An interactive Power BI dashboard was built to visualize key metrics and uncover potential Medicare fraud patterns.
+An interactive Power BI dashboard was built to visualize key metrics and uncover potential Medicare fraud patterns using Power Query for data transformation and cleaning, and DAX to create custom measures and calculated columns like fraud rate, claim month, claim type etc.,
 
 ![Medicare Claims Fraud Overview](Power-BI-Dashboards/Medicare-Claims-Fraud-Overview.png)<br>
 ![Provider-and-Physician-Analysis](Power-BI-Dashboards/Provider-and-Physician-Analysis.png)<br>
