@@ -88,43 +88,54 @@ An interactive Power BI dashboard was built to visualize key metrics and uncover
 
 ### 📝Results/Findings
 
-- <b>Dominance of Major Chains:</b>
-  - The Bengaluru restaurant landscape is heavily influenced by popular chains like Cafe Coffee Day, McDonald's, and Baskin-Robbins, indicating strong customer preference for recognizable brands.
-    
-- <b>High Demand for Dessert and Beverages:</b>
-  - Chains like Corner House Ice Cream, Sweet Truth, and The Chocolate Heaven highlight the popularity of dessert and beverage-focused outlets across the city.
-    
-- <b>Casual Dining and Quick Bites are Preferred:</b>
-  - The majority of outlets fall under Casual Dining, Quick Bites, and Cafes, showing that customers favor relaxed and accessible dining experiences.
+The analysis of Medicare claims data reveals several compelling patterns and anomalies that strongly suggest systemic fraud, especially in outpatient services. The key findings are categorized below:
 
-- <b>Popular Cuisines:</b>
-  - North Indian, South Indian, and Chinese are the most common cuisines offered, reflecting local tastes and preferences.
- 
-- <b>Neighborhood Trends:</b>
-  - Areas like BTM, HSR Layout, and Koramangala host a dense concentration of restaurants, making them hotspots for food businesses but also increasing competition.
+- <b>Diagnosis and Procedure Code Anomalies:</b>
+  - A significant proportion of fraudulent claims, both inpatient and outpatient, contain non-specific placeholder codes (e.g., No_diagnosis_X, No_Procedure_X).
+  - Valid ICD codes like 4019 (hypertension) and 25000 (diabetes) are underrepresented in fraudulent claims compared to placeholder codes.
+  - Outpatient claims show an extreme dominance of these dummy codes, suggesting automated or templated fraud.
 
-- <b>Online Delivery Popularity:</b>
-  - A large number of restaurants offer online delivery, suggesting the growing reliance on food delivery apps among Bengaluru residents.
+- <b>Diagnosis-Procedure Combinations:</b>
+  - Top combinations in fraudulent inpatient claims often pair a valid diagnosis (e.g., 4019) with a placeholder procedure code, which is implausible in medical scenarios.
+  - In outpatient claims, fraudulent combinations almost exclusively use No_diagnosis_3 or No_diagnosis_9 with dummy procedures, hinting at deliberate manipulation.
 
-- <b>Price and Ratings Relationship:</b>
-  - There isn’t a strict correlation between high pricing and high ratings. Reasonably priced restaurants often maintain strong customer satisfaction through quality and service.
+- <b>Demographic Disparities:</b>
+  - Fraudulent claims are more frequently associated with beneficiaries coded as Gender 0 (likely females) and Race 1 (typically representing White).
+  - Age distribution analysis shows that fraudulent claims are skewed toward older beneficiaries (80+ years), especially in inpatient cases. Outpatient fraud spans a wider 
+    age range.
+
+- <b>Chronic Conditions Patterns:</b>
+  - Fraud is disproportionately associated with common, high-cost chronic conditions such as Ischemic Heart Disease, Diabetes, and Heart Failure.
+  - Many fraudulent claims are tied to patients with multiple chronic conditions, justifying expensive treatments and frequent visits.
+  - Surprisingly, outpatient fraud is also prevalent among beneficiaries with no chronic conditions, suggesting fabricated claims for healthy individuals.
+
+- <b>Geographic and Beneficiary-Level Trends:</b>
+  - States like 5 and 33 have consistently high fraud rates across multiple country codes, indicating regional fraud clusters.
+  - Individual beneficiaries were identified with 20–30+ fraudulent claims, mostly outpatient. Some also had inpatient fraud, implying repeated or organized fraud patterns.
 
 ### 📝🚀Recommendations
 
-- <b>New Entrants Should Focus on High-Demand Locations:</b>
-Areas such as Koramangala, BTM, and HSR Layout are ideal due to high foot traffic and customer activity, though competition is also higher.
+- <b>Enhance Rule-Based and AI Fraud Detection:</b>
+  - Flag any claims using placeholder codes like No_diagnosis_X or No_Procedure_X for immediate audit.
+  - Use diagnosis-procedure pairings (e.g., 4019 + No_Procedure_X) as key features in machine learning models.
+  - Include complex chronic condition combinations and demographic data in fraud prediction models.
 
-- <b>Consider Offering Dessert or Beverage Options:</b>
-Given the success of dessert chains, incorporating such items can attract additional customer segments and boost average order value.
+- <b>Tighten Claims Validation:</b>
+  - Implement stricter validation rules to reject or review claims with non-specific codes, especially in outpatient services.
+  - Require additional documentation or justification for claims involving multiple chronic conditions without corresponding procedure codes.
 
-- <b>Opt for Quick Bites or Cafe Formats:</b>
-For lower startup and operating costs with high customer turnover, focusing on Quick Bites or Cafe formats can be a strategic entry point.
+- <b>Targeted Auditing:</b>
+  - Prioritize audits for beneficiaries with unusually high counts of outpatient claims, states with high fraud incidence (e.g., States 5 and 33), and claims involving 
+    gender/race patterns aligned with high-fraud demographics (e.g., Gender 0, Race 1).
 
-- <b>Offer Online Delivery Services:</b>
-To remain competitive and meet customer expectations, ensure integration with major food delivery platforms.
+- <b>Geospatial and Network Surveillance:</b>
+  - Investigate providers and facilities operating in high-fraud regions.
+  - Use network analysis to uncover links between providers and beneficiaries involved in repetitive fraudulent activities.
 
-- <b>Keep Prices Reasonable Without Compromising Quality:</b>
-High ratings do not necessarily require high prices. Focus on maintaining quality and service to achieve strong customer loyalty.
+- <b>Policy and Educational Initiatives:</b>
+  - Educate providers on proper coding practices and reinforce the risks of submitting placeholder or incomplete information.
+  - Promote policies that require at least one valid procedure code in outpatient claims.
 
-- <b>Leverage Popular Cuisines:</b>
-Starting with familiar and in-demand cuisines like North Indian and South Indian can help attract a larger customer base, especially in new setups.
+- <b>Real-Time Alerts and Feedback:</b>
+  - Develop real-time claim monitoring systems to flag suspicious submissions at the point of entry.
+  - Implement feedback loops to inform providers of rejected or flagged claims for continuous improvement.
